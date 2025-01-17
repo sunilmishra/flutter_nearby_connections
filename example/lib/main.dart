@@ -54,7 +54,7 @@ class Home extends StatelessWidget {
                 color: Colors.red,
                 child: Center(
                     child: Text(
-                  'BROWSER',
+                  'DISCOVER',
                   style: TextStyle(color: Colors.white, fontSize: 40),
                 )),
               ),
@@ -69,7 +69,7 @@ class Home extends StatelessWidget {
                 color: Colors.green,
                 child: Center(
                     child: Text(
-                  'ADVERTISER',
+                  'ADVERTISE',
                   style: TextStyle(color: Colors.white, fontSize: 40),
                 )),
               ),
@@ -299,7 +299,6 @@ class _DevicesListScreenState extends State<DevicesListScreen> {
         callback: (isRunning) async {
           if (isRunning) {
             if (widget.deviceType == DeviceType.browser) {
-
               await nearbyService.stopBrowsingForPeers();
               await Future.delayed(Duration(microseconds: 200));
               await nearbyService.startBrowsingForPeers();
