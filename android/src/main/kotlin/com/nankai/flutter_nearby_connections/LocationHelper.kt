@@ -20,7 +20,7 @@ const val REQUEST_LOCATION_PERMISSION = 7777
 
 class LocationHelper(private val activity: Activity) : PluginRegistry.ActivityResultListener, PluginRegistry.RequestPermissionsResultListener {
 
-    private var mLocationSettingsRequest: LocationSettingsRequest? = null
+    private lateinit var mLocationSettingsRequest: LocationSettingsRequest
     private var result: Result? = null
 
     private fun requestLocationPermission() {
